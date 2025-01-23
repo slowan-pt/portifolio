@@ -12,7 +12,14 @@ const Hero = () => {
         backgroundColor: theme.palette.primary.main,
         height: "100vh",
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        [theme.breakpoints.up('xs')]:{
+            backgroundColor: "red",
+            paddingTop: "100px"
+        },
+        [theme.breakpoints.up('md')]:{
+            backgroundColor: "blue"
+        }
     }))
 
     const StyledImg = styled("img")(({theme}) => ({
